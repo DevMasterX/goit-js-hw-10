@@ -12,3 +12,10 @@ export function fetchBreeds() {
     .then(response => response)
     .catch(error => error);
 }
+
+export function fetchCatByBreed(breedId) {
+  return axios
+    .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
+    .then(response => response)
+    .catch(error => error);
+}
