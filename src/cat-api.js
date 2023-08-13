@@ -9,13 +9,13 @@ const BASE_URL = 'https://api.thecatapi.com/v1';
 export function fetchBreeds() {
   return axios
     .get(`${BASE_URL}/breeds`)
-    .then(response => response)
-    .catch(error => error);
+    .then(resp => resp)
+    .catch(err => err);
 }
 
 export function fetchCatByBreed(breedId) {
   return axios
     .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
-    .then(response => response)
-    .catch(error => error);
+    .then(resp => resp)
+    .catch(err => err);
 }
